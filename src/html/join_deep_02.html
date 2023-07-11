@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<title>메타버스</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="/src/assets/css/swiper.min.css" rel="stylesheet">
+<link href="/src/assets/css/base.css" rel="stylesheet">
+<script src="/src/assets/js/jquery.min.js"></script>
+<script src="/src/assets/js/swiper.js"></script>
+<script src="/src/assets/js/custom.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===== app ====== -->
+<div id="app">
+
+    <!-- ===== header ====== -->
+    <div id="header">
+        <div class="inner">
+           <h2>순천향대 재학생 회원가입</h2>
+           <p class="iphoneCheck"><input type="checkbox" value="1" id="bb1" name="bb1" checked=""><label class="check" for="bb1"></label></p>
+        </div>
+    </div>
+    <!-- ===== /header ====== -->
+
+	<!-- ===== container ====== -->
+    <div id="container">
+
+       <div class="wrap">
+        <!-- <div class="login_hd">
+            <h2>
+                아이디 찾기
+            </h2>
+        </div> -->
+        <div class="inp_bx_form">
+
+            <div class="inp_wrap">
+          <p>이름</p>
+
+                <div class="inp_size fixinput"><input class="inp" type="text" value="홍길동" disabled></div>
+            </div>
+            <div class="inp_wrap">
+          <p>아이디</p>
+
+                <div class="inp_size fixinput"><input class="inp" type="text" value="dhf2011@musicne.com" disabled></div>
+            </div>
+            <div class="inp_wrap" style="margin-top: 2.5rem;">
+                <p>성별</p>
+      
+                <div style="display: flex; width:100%;margin-top: 15px; ">
+                    <div class="modal_ckbx">
+                         <label class="mr20">
+                             <input name="primaryCheck" id="primaryCheck" type="radio">남자
+                        </label>
+                         <label>
+                             <input name="primaryCheck" id="primaryCheck" type="radio">여자
+                        </label>
+                    </div>
+               </div>  
+              <div class="setting-bx" style="display: flex; margin-top: 2.5rem;">
+                 
+              </div>
+              <div>
+              </div>
+            </div>
+            <div class="inp_wrap">
+          <p>생년월일</p>
+
+                <div class="inp_size"><input class="inp" type="text" placeholder="8자리로 입력해주세요. 
+
+
+                  "></div>
+            </div>
+            <div class="inp_wrap">
+          <p>학과</p>
+
+                <div class="inp_size"><input class="inp" type="text" placeholder="학과 이름을 입력해주세요."></div>
+            </div>
+            <div class="inp_wrap">
+          <p>학번</p>
+
+                <div class="inp_size"><input class="inp" type="text" placeholder="학번을 입력해주세요.
+                  "></div>
+            </div>
+            
+            <div class="inp_wrap" style="margin-top: 2.5rem;">
+                <p>국적</p>
+      
+                <div style="display: flex; width:100%;margin-top: 15px; ">
+                    <div class="modal_ckbx">
+                         <label class="mr20">
+                             <input name="countryCheck" id="countryCheck" type="radio">한국
+                        </label>
+                         <label class="mr20">
+                             <input name="countryCheck" id="countryCheck" type="radio">중국
+                        </label>
+                         <label>
+                             <input name="countryCheck" id="countryCheck" type="radio">기타
+                        </label>
+                    </div>
+               </div>  
+              <div class="setting-bx" style="display: flex; margin-top: 2.5rem;">
+                 
+              </div>
+              <div>
+              </div>
+            </div>
+            <div class="inp_wrap">
+                <p>핸드폰 번호</p>
+      
+                      <div class="inp_size"><input class="inp" type="text" placeholder=" - 를 제외하고 11자리 숫자를 입력해주세요."></div>
+                  </div>
+            <div class="inp_wrap">
+                <p>학생증 이미지</p>
+      
+                      <div class="inp_size"><input class="inp" type="file"></div>
+                  </div>
+            <div class="inp_wrap">
+                <p>프로필 이미지</p>
+      
+                      <div class="inp_size"><input class="inp" type="file" p></div>
+                  </div>
+            <div class="inp_wrap">
+                <p>프로필 색상</p>
+      
+                      <div class="inp_size"><input class="inp" type="color"></div>
+                  </div>
+            <div class="inp_wrap">
+                <p>프로필 미리보기</p>
+      
+                      <div>
+                        
+                      </div>
+                  </div>
+              <a class="inp_size mt40" href="javascript:callPop('#popArlim');"><button  type="button" class="bt-basic">비밀번호 변경</button></a>
+
+            
+        </div>
+
+       </div>
+
+
+	</div>
+    <!-- ===== /container ====== -->
+
+</div>
+<!-- ===== /app ====== -->
+
+<div class="modal fade" id="popArlim">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">비밀번호 재설정</h5>
+      </div>
+      <div class="modal-body">
+        <p>새 비밀번호로 변경되었습니다. 
+            메타스쿨에서 다시 로그인해주세요 </p>
+      </div>
+      <div class="modal-footer">
+
+		<button type="button" class="bt mint" onclick="closePop('#popArlim');">예</button>
+
+		</div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>

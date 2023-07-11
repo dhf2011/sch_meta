@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<title>메타버스</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="/src/assets/css/swiper.min.css" rel="stylesheet">
+<link href="/src/assets/css/base.css" rel="stylesheet">
+<script src="/src/assets/js/jquery.min.js"></script>
+<script src="/src/assets/js/swiper.js"></script>
+<script src="/src/assets/js/custom.js"></script>
+
+</head>
+
+<body  class="main_bg">
+
+<!-- ===== app ====== -->
+<div id="app" class="grid_bg">
+
+
+    <!-- ===== header ====== -->
+    <div id="header">
+        <div class="inner_02">
+            <h2>Q & A</h2>
+           <div class="hd_icon">
+            <div class="space_more_list">
+              <ul>
+                <li>
+                  <a>강의실</a>
+                </li>
+                <li>
+                  <a>행정지원실</a>
+                </li>
+                <li>
+                  <a>스터디Cafe</a>
+                </li>
+                <li>
+                  <a>VOD자료실</a>
+                </li>
+                <li>
+                  <a>VOD자료실</a>
+                </li>
+                <li>
+                  <a>VOD자료실</a>
+                </li>
+                <li>
+                  <a>VOD자료실</a>
+                </li>
+                <li>
+                  <a>VOD자료실</a>
+                </li>
+              </ul>
+             </div>
+            <div class="hd_icon_more">
+             <img src="/src/assets/images/ic_more.svg" alt="">
+             
+            </div>
+            <div class="hd_icon_rap">
+              <div class="hd_icon_alarm">
+                <img src="/src/assets/images/ic_alarm.svg" alt="">
+              </div>
+              <div class="hd_icon_registration">
+                <img src="/src/assets/images/ic_registration.svg" alt="">
+              </div>
+              <div class="hd_icon_exit">
+                <img src="/src/assets/images/ic_exit.svg" alt="">
+              </div>
+            </div>
+           </div>
+        </div>
+    </div>
+    <!-- ===== /header ====== -->
+
+	<!-- ===== container ====== -->
+    <div id="container">
+
+       <div class="wrap">
+        <!-- <div class="login_hd">
+            <h2>
+                아이디 찾기
+            </h2>
+        </div> -->
+        <div class="page_bg">
+            <div class="page_content">
+               <div class="question_hd_wrap">
+                <ul>
+                    <li class="on">
+                        <a href="">전체</a>
+                    </li>
+                    <li>
+                        <a href="">회원가입</a>
+                    </li>
+                    <li>
+                        <a href="">로그인</a>
+                    </li>
+                    <li>
+                        <a href="">이용문의</a>
+                    </li>
+                    <li>
+                        <a href="">나의질문</a>
+                    </li>
+                    <li>
+                        <a href="">기타</a>
+                    </li>
+                </ul>
+                <div class="sch_btn_wrap">
+                    <input type="search"  value="" placeholder="검색어를 입력하세요.
+                    ">
+                    <div class="sch_btn">
+
+                    </div>
+                    <a href="/src/html/qna_writing.html" class="writing_btn">
+
+                    </a>
+
+                </div>
+               </div>
+               <div class="page_bady">
+               <div style="padding:0 30px">
+                    <table class="comment_list_tb">
+                        <colgroup>
+                            <col style="width:42px" />
+                            <col style="width:60px" />
+                            <col style="width:10%" />
+                            <col style="width:*" />
+                            <col style="width:66px" />
+                        </colgroup>
+                       <tbody>
+                            <tr onclick="javascript:callPop('#popArlim');">
+                                <td>
+                                    <img src="/src/assets/images/profile_rock.png" alt="">
+                                </td>
+                                <td>
+                                    <p>김한국</p>
+                                </td>
+                                <td>
+                                   <p> 2023.02.28</p>
+                                </td>
+                                <td>
+                                   <p class="text_limit"> 비밀글 입니다.</p>
+                                </td>
+                                <td>
+                                    <button class="btn_basic">답변 완료</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td  >
+                                    <img src="/src/assets/images/profile_rock.png" alt="">
+                                </td>
+                                <td>
+                                    김춘향
+                                </td>
+                                <td>
+                                    2023.02.28
+                                </td>
+                                <td class="text_limit">
+                                    <p>정원이 다 차면 수강신청면 수강신청면  차면 수강신청면 수강신청면  차면 수강신청면 수강신청면 수강면 수강신청면 수강신청면 수강신청신청면 수강신청면 수강신청면 수강신청이 안되나요?<span><button class="btn_sm_basic">NEW</button></span></p>
+                                </td>
+                                <td>
+                                    <button class="btn_basic" disabled>답변 대기</button>
+                                </td>
+                            </tr>
+                            <tr >
+                                <td >
+                                    <img src="/src/assets/images/profile_rock.png" alt="">
+                                </td>
+                                <td>
+                                    김춘향
+                                </td>
+                                <td>
+                                    2023.02.28
+                                </td>
+                                <td>
+                                    <p class="text_limit">정원이 다 차면 수강신청이 안되나요?<span><button class="btn_sm_basic">NEW</button></span></p>
+                                </td>
+                                <td>
+                                    <button class="btn_basic" disabled>답변 대기</button>
+                                </td>
+                            </tr>
+                       </tbody>
+    
+                    </table>
+               </div>
+               </div>
+            </div>
+        </div>
+    
+       </div>
+
+
+	</div>
+    <!-- ===== /container ====== -->
+
+</div>
+<!-- ===== /app ====== -->
+
+<div class="modal fade" id="popArlim">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">출석처리가 안됐습니다.</h5>
+      </div>
+      <div class="modal_line">
+
+      </div>
+      <div class="modal-body">
+       
+        <div class="modal_comment_wrap">
+          <div class="comment_profile">
+            <div class="profile_color">
+             
+            </div>
+            <img src="/src/assets/images/profile.png" alt="">
+            <div class="profile_text">
+              <p>김한국</p>
+              <span>23.02.21</span>
+            </div>
+
+          </div>
+          <div class="modal_comment_contents">
+<p>안녕하세요.        
+ 안됐습니다. 출석처리 해주시길 바랍니다안녕하안녕하세요.        
+  실시간 강의에 출석했는데 출석처리가 안됐습니다. 출석처리 해주시길 바랍니다안녕하세요. 시간 강의에 출석했는데 출석처리가 안됐습니다. 출석처리 해주시길 바랍니다안녕하세요.시간 강의에 출석했는데 출석처리가 안됐습니다. 출석처리 해주시길 바랍니다</p>
+          </div>
+
+        </div>
+       
+       
+      </div>
+      <div class="modal_noodle">
+
+      </div>
+      <div class="modal-body">
+        <div class="modal_comment02_wrap">
+          <h2>
+            답변
+          </h2>
+          <p>
+           안녕하세요. 메타스쿨입니다.
+실시간 강의 출석은 해당 과목의 교수님과 상담을 통해 해결해 주시기 바랍니다. 상담은 메타스쿨 홈>교수실 에서 신청하실 수 있습니다.
+메타스쿨을 이용해 주셔서 감사합니다.
+          </p>
+        </div>
+
+      </div> 
+      <div class="modal-footer">
+        
+
+		<button type="button" class="bt mint" onclick="closePop('#popArlim');">닫기</button>
+
+		</div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+ $(document).ready(function(){
+    $('.sch_btn').click(function(){
+        $('.sch_btn_wrap input').fadeToggle();
+    })
+ })
+
+
+
+
+
+</script>
+
+</body>
+</html>

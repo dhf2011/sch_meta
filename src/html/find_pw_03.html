@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<title>메타버스</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="/src/assets/css/swiper.min.css" rel="stylesheet">
+<link href="/src/assets/css/base.css" rel="stylesheet">
+<script src="/src/assets/js/jquery.min.js"></script>
+<script src="/src/assets/js/swiper.js"></script>
+<script src="/src/assets/js/custom.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===== app ====== -->
+<div id="app">
+
+    <!-- ===== header ====== -->
+    <div id="header">
+        <div class="inner">
+           <h2>비밀번호 재설정</h2>
+           <p class="iphoneCheck"><input type="checkbox" value="1" id="bb1" name="bb1" checked=""><label class="check" for="bb1"></label></p>
+        </div>
+    </div>
+    <!-- ===== /header ====== -->
+
+	<!-- ===== container ====== -->
+    <div id="container">
+
+       <div class="wrap">
+        <!-- <div class="login_hd">
+            <h2>
+                아이디 찾기
+            </h2>
+        </div> -->
+        <div class="inp_bx_form">
+
+            <div class="inp_wrap">
+          <p>새 비밀번호</p>
+
+                <div class="inp_size"><input class="inp" type="text" placeholder="10자 이상, 영문대소, 숫자, 특수문자 중 2개 포함 
+
+                  "></div>
+            </div>
+            <div class="inp_wrap">
+          <p>새 비밀번호 확인</p>
+
+                <div class="inp_size"><input class="inp" type="text" placeholder="10자 이상, 영문대소, 숫자, 특수문자 중 2개 포함 
+
+                  "></div>
+            </div>
+           
+              <a class="inp_size mt40" href="javascript:callPop('#popArlim');"><button  type="button" class="bt-basic">비밀번호 변경</button></a>
+
+            
+        </div>
+
+       </div>
+
+
+	</div>
+    <!-- ===== /container ====== -->
+
+</div>
+<!-- ===== /app ====== -->
+
+<div class="modal fade" id="popArlim">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">비밀번호 재설정</h5>
+      </div>
+      <div class="modal-body">
+        <p>새 비밀번호로 변경되었습니다. 
+            메타스쿨에서 다시 로그인해주세요 </p>
+      </div>
+      <div class="modal-footer">
+
+		<button type="button" class="bt mint" onclick="closePop('#popArlim');">예</button>
+
+		</div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>

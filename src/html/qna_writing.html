@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<title>메타버스</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="/src/assets/css/swiper.min.css" rel="stylesheet">
+<link href="/src/assets/css/base.css" rel="stylesheet">
+<script src="/src/assets/js/jquery.min.js"></script>
+<script src="/src/assets/js/swiper.js"></script>
+<script src="/src/assets/js/custom.js"></script>
+
+</head>
+
+<body  class="main_bg">
+
+<!-- ===== app ====== -->
+<div id="app" class="grid_bg">
+
+
+    <!-- ===== header ====== -->
+   
+    <!-- ===== /header ====== -->
+
+	<!-- ===== container ====== -->
+    <div class="full_container">
+      <div class="full_wrap">
+        <div class="full_page">
+
+          <div class="schedule_add_hd">
+            <h2>질문 등록</h2>
+            <div class="close_btn">
+
+            </div>
+          </div>
+          <div class="schedule_add_table">
+            <div class="writing_table_wrap">
+              <table>
+                <tr>
+                  <th>
+                    분류
+                  </th> 
+                  <td class="add_table_title" style="    border-top: 1px solid #94B9F3;">
+                    <div class="check_box_wrap">
+                        <div class="check_box">
+                            <input id="join_chec_btn" type="checkbox">
+                            <label for="join_chec_btn"> # 회원가입</label>
+                        </div>
+                        
+                        <div class="check_box">
+                            <input id="login_chec_btn" type="checkbox">
+                            <label for="login_chec_btn"> # 로그인</label>
+                        </div>
+                        
+                        <div class="check_box">
+                            <input id="inquiry_chec_btn" type="checkbox">
+                            <label for="inquiry_chec_btn"> # 이용문의</label>
+                        </div>
+                        
+                        <div class="check_box">
+                            <input id="etc_chec_btn" type="checkbox">
+                            <label for="etc_chec_btn"> # 기타</label>
+                        </div>
+                        
+                      
+                        
+                       </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    제목
+                  </th>
+                  <td>
+                    <input type="text" placeholder="제목을 입력해주세요.">
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    내용
+                  </th>
+                  <td>
+                    <textarea name="" id="" cols="" rows=""maxlength="1000" placeholder="질문 내용을 입력해주세요.  최대 1000 자 이내로 입력 가능합니다."></textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    비밀글
+                  </th>
+                  <td>
+                    <div>
+                        <label class="mr20">
+                            <input name="countryCheck" id="countryCheck" type="radio">예
+                       </label>
+                        <label class="mr20">
+                            <input name="countryCheck" id="countryCheck" type="radio">아니요
+                       </label>
+                        
+                   </div>
+                  </td>
+                </tr>
+                
+              </table>
+            </div>
+
+           
+
+          </div>
+          <div class="registration_bm_btn_wrap">
+            
+               <a > <button class="close" >닫기</button></a>
+               <a href="javascript:callPop('#popArlim');">
+                    <button  class="registration">등록</button>
+               
+               </a>
+          </div>
+        
+         
+       
+     
+         
+          
+          
+        </div>
+
+
+      </div>
+
+    </div>
+    <!-- ===== /container ====== -->
+
+</div>
+<!-- ===== /app ====== -->
+
+<div class="modal fade" id="popArlim">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">안내</h5>
+      </div>
+      <div class="modal-body">
+        <p>분류를 선택해주세요. </p>
+      </div>
+      <div class="modal-footer">
+
+		<button type="button" class="bt mint" onclick="closePop('#popArlim');">확인</button>
+
+		</div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+
+
+
+// 체크박스
+
+
+
+  $(document).ready(function() {
+  $('.check_box_wrap').on('click', '.check_box', function() {
+    var checkbox = $(this).children('input[type="checkbox"]');
+    
+    if (checkbox.is(':checked')) {
+      $(this).addClass('on');
+    } else {
+      $(this).removeClass('on');
+    }
+    
+  });
+});
+
+
+
+
+
+
+// 체크박스 종료
+
+
+
+
+</script>
+
+</body>
+</html>

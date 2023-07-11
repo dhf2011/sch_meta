@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<title>메타버스</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="/src/assets/css/swiper.min.css" rel="stylesheet">
+<link href="/src/assets/css/base.css" rel="stylesheet">
+<script src="/src/assets/js/jquery.min.js"></script>
+<script src="/src/assets/js/swiper.js"></script>
+<script src="/src/assets/js/custom.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===== app ====== -->
+<div id="app">
+
+    <!-- ===== header ====== -->
+    <div id="header">
+        <div class="inner">
+           <h2>아이디 확인</h2>
+           <p class="iphoneCheck"><input type="checkbox" value="1" id="bb1" name="bb1" checked=""><label class="check" for="bb1"></label></p>
+        </div>
+    </div>
+    <!-- ===== /header ====== -->
+
+	<!-- ===== container ====== -->
+    <div id="container">
+
+       <div class="wrap">
+        <!-- <div class="login_hd">
+            <h2>
+                아이디 찾기
+            </h2>
+        </div> -->
+        <div class="inp_bx_form">
+            <div class="find_user_id">
+                <p>홍길동 님의 아이디는 <span>dhf2011@musicen.com</span> 입니다.</p>
+
+            </div>
+            <div class="inp_size mt40" >
+                <button type="button" class="bt-basic">비밀번호 찾기</button>
+              </div>
+            <div class="inp_size">
+                <button type="button" style="margin-top: 1rem;" class="bt-basic">로그인 하기</button>
+              </div>
+
+            <div class="find_id_foot">
+              
+              <div class="find_id_foot_contents">
+                <p>아직 SGM 회원이 아니신가요?</p>
+                <a href="javascript:callPop('#popArlim');" class="btn radius sm">회원가입</a>
+              </div>
+              <div class="find_id_foot_contents">
+                <p>고객센터 : 070-0000-0000</p>
+              </div>
+            </div>
+        </div>
+
+       </div>
+
+
+	</div>
+    <!-- ===== /container ====== -->
+
+</div>
+<!-- ===== /app ====== -->
+
+<div class="modal fade" id="popArlim">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">아이디 확인</h5>
+      </div>
+      <div class="modal-body">
+        <p>아이디를 찾으시겠습니까?  </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="bt" onclick="closePop('#popArlim');">아니오</button>
+
+		<button type="button" class="bt mint" onclick="closePop('#popArlim');">예</button>
+
+		</div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>

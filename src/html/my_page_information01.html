@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="email=no">
+  <title>메타버스</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="/src/assets/css/swiper.min.css" rel="stylesheet">
+  <link href="/src/assets/css/base.css" rel="stylesheet">
+  <script src="/src/assets/js/jquery.min.js"></script>
+  <script src="/src/assets/js/swiper.js"></script>
+  <script src="/src/assets/js/custom.js"></script>
+
+</head>
+
+<body class="main_bg">
+
+  <!-- ===== app ====== -->
+  <div id="app" class="grid_bg">
+
+
+    <!-- ===== header ====== -->
+
+    <!-- ===== /header ====== -->
+
+    <!-- ===== container ====== -->
+    <div class="full_container">
+      <div class="full_wrap">
+        <div class="full_page">
+
+          <div class="schedule_add_hd">
+            <h2>나의 정보
+            </h2>
+            <div class="close_btn">
+
+            </div>
+          </div>
+
+
+          <div class="">
+            <div class="inp_wrap">
+              <p>이름</p>
+              <div class="inp_size fixinput"><input class="inp" type="text" value="김민영" disabled=""></div>
+            </div>
+            <div class="inp_wrap">
+              <p>닉네임</p>
+
+              <div class="inp_size"><input class="inp" type="text" value="안녕하세요김민영"></div>
+            </div>
+            <div class="inp_wrap">
+              <p>아이디</p>
+
+
+              <div class="inp_size fixinput"><input class="inp" type="text" value="mykim@sch.ac.kr
+                    " disabled=""></div>
+            </div>
+            <div class="inp_wrap">
+              <p>비밀번호</p>
+
+              <div class="inp_size"><button type="button" onclick="callPop('#primaryModal_change_pw')"
+                  class="bt-basic mt15 bBlack">비밀번호 재설정</button></div>
+            </div>
+
+
+            <div class="inp_wrap">
+              <p>질문선택</p>
+              <select name="question">
+                <option value="">질문을 선택해주세요.</option>
+                <option value="학생">자신의 인생 좌우명은?</option>
+                <option value="회사원">타인이 모르는 자신만의 선체비밀이 있다면?</option>
+                <option value="기타">친구들에게 공개하지 않은 어릴 적 별명이 있다면?</option>
+              </select>
+            </div>
+            <div class="inp_wrap">
+              <p>답변</p>
+              <div class="inp_size"><input type="text" class="inp" placeholder="답변을 입력해주세요."></div>
+            </div>
+
+            <div class="dv-chk mb-3 mt40">
+              <label>
+                <input id="basicCheck" onclick="basicCheckClick(1);" name="basicCheck" type="checkbox">기본 약관 동의 ( 필수 )
+              </label>
+              <a data-toggle="modal" href="javascript:callPop('#primaryModal');" data-target="#primaryModal"
+                class="cBlue">약관보기</a>
+            </div>
+            <div class="dv-chk mb-3 mt10">
+              <label>
+                <input id="basicCheck" onclick="basicCheckClick(1);" name="basicCheck" type="checkbox">마켓팅 활용 동의 ( 선택 )
+              </label>
+              <a data-toggle="modal" href="javascript:callPop('#primaryModal_02');" data-target="#primaryModal"
+                class="cBlue">약관보기</a>
+            </div>
+            <div class="inp_wrap mt40">
+              <p>수강회원 가입</p>
+
+              <div class="inp_size"><button type="button" class="bt-basic mt15 bBlack">수강회원가입</button></div>
+            </div>
+
+            <div class="inp_wrap mt40">
+
+              <div class="inp_line">
+
+              </div>
+
+            </div>
+            <div class="inp_wrap ">
+
+              <div class="schedule_add_hd cBlue">
+                <h2>추가 정보
+                </h2>
+
+              </div>
+
+            </div>
+            <div class="inp_wrap mt40">
+              <p>생년월일</p>
+
+              <div class="inp_size"><input class="inp" type="text" placeholder="8자리로 입력해주세요. 
+          
+          
+                            "></div>
+            </div>
+
+            <div class="inp_wrap">
+              <p>성별</p>
+
+              <div style="display: flex; width:100%;margin-top: 15px; ">
+                <div class="modal_ckbx">
+                  <label class="mr20">
+                    <input name="primaryCheck" id="primaryCheck" type="radio">남자
+                  </label>
+                  <label>
+                    <input name="primaryCheck" id="primaryCheck" type="radio">여자
+                  </label>
+                </div>
+              </div>
+              <div class="setting-bx" style="display: flex; margin-top: 2.5rem;">
+
+              </div>
+              <div>
+              </div>
+            </div>
+
+            <div class="inp_wrap">
+              <p>학과</p>
+
+              <div class="inp_size"><input class="inp" type="text" placeholder="학과 이름을 입력해주세요."></div>
+            </div>
+            <div class="inp_wrap">
+              <p>학번</p>
+
+              <div class="inp_size"><input class="inp" type="text" placeholder="학번을 입력해주세요.
+                      "></div>
+            </div>
+
+
+            <div class="inp_wrap">
+              <p>핸드폰 번호</p>
+
+              <div class="inp_size"><input class="inp" type="text" placeholder=" - 를 제외하고 11자리 숫자를 입력해주세요."></div>
+            </div>
+            <div class="inp_wrap">
+              <p>학생증 이미지</p>
+
+              <div class="inp_size"><input class="inp" type="file"></div>
+            </div>
+            <div class="inp_wrap">
+              <p>프로필 이미지</p>
+
+              <div class="inp_size"><input class="inp" type="file"></div>
+            </div>
+            <div class="inp_wrap">
+              <p>프로필 색상</p>
+
+              <div class="inp_size"><input class="inp" type="color"></div>
+            </div>
+            <div class="inp_wrap">
+              <p>프로필 미리보기</p>
+
+              <div>
+
+              </div>
+            </div>
+            <div class="inp_wrap mt40 text-right">
+              <span onclick="callPop('#primaryModal_secession')">회원탈퇴 ></span>
+
+            </div>
+
+          </div>
+          <div class="registration_bm_btn_wrap">
+
+            <a> <button class="close">취소</button></a>
+            <a href="javascript:callPop('#primaryModal_02');">
+              <button class="registration">회원정보 수정</button>
+
+            </a>
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
+      </div>
+
+    </div>
+    <!-- ===== /container ====== -->
+
+  </div>
+  <!-- ===== /app ====== -->
+  <!-- 개인정보 동의 팝업 -->
+  <div class="modal" id="primaryModal" aria-hidden="true">
+    <div class="modal-dialog_in modal-sm_in modal-dialog-centered_in">
+      <div class="modal-content_in">
+        <div class="modal_close" onclick="basicCheckClick(1);">
+          <img src="/image/close.png" alt="">
+        </div>
+        <div class="modal-body_in" style="overflow:auto">
+          <div>
+            <div class="modal-header_in">
+              <h5 class="modal-title_in">회원가입 약관
+              </h5>
+            </div>
+            <div class="modal-agreement_in">
+              <p id="primaryModalText1">
+                까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까?
+                까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까?
+                까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까?
+                까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까?
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="modal-header_in">
+              <h5 class="modal-title_in">개인정보 보호처리 방침
+              </h5>
+            </div>
+            <div class="modal-agreement_in">
+              <p id="primaryModalText2">
+                까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까?
+              </p>
+            </div>
+          </div>
+          <div class="setting-bx" style="display: flex; margin-top: 2.5rem;">
+            <div style="display: flex; width:100%; justify-content: center;">
+              <div class="modal_ckbx">
+                <label>
+                  <input name="primaryCheck" id="primaryCheck" type="checkbox">광고 수신 동의 (선택)
+                </label>
+              </div>
+            </div>
+          </div>
+          <div>
+          </div>
+        </div>
+        <div class="modal-footer_in">
+          <button class="btn mint block" style="border-radius: 0;" id="primaryModal bt_agreement"
+            onclick="closePop('#primaryModal');">약관에 동의합니다.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 마케팅 동의 팝업 -->
+  <div class="modal" id="primaryModal_02" aria-hidden="true">
+    <div class="modal-dialog_in modal-sm_in modal-dialog-centered_in">
+      <div class="modal-content_in">
+        <div class="modal_close" onclick="basicCheckClick(1);">
+          <img src="/image/close.png" alt="">
+        </div>
+        <div class="modal-body_in" style="overflow:auto">
+          <div>
+            <div class="modal-header_in">
+              <h5 class="modal-title_in">마케팅 활용 동의 약관
+              </h5>
+            </div>
+            <div class="modal-agreement_in">
+              <p id="primaryModalText1">
+                까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까?
+                까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까?
+                까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까?
+                까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까?
+              <div>
+                <div class="dv-chk mt5" style="text-align: end;">
+                  <label>
+                    <input id="basicCheck" onclick="basicCheckClick(1);" name="basicCheck" type="checkbox">마켓팅 활용 동의 (
+                    선택 )
+                  </label>
+                </div>
+              </div>
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="modal-header_in">
+              <h5 class="modal-title_in">광고 수신 동의 약관
+              </h5>
+            </div>
+            <div class="modal-agreement_in">
+              <p id="primaryModalText2">
+                까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃
+                하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까? 로그아웃 하시겠습니까?
+              <div class="dv-chk mt5" style="text-align: end;">
+                <label>
+                  <input id="basicCheck" onclick="basicCheckClick(1);" name="basicCheck" type="checkbox">광고 수신 동의 ( 선택 )
+                </label>
+              </div>
+              </p>
+            </div>
+          </div>
+          <div class="inp_wrap" style="margin-top: 2.5rem;">
+            <p>생년월일</p>
+
+            <div class="inp_size"><input type="password" class="inp" placeholder="8자리로 입력해주세요( ex 19990722)"></div>
+          </div>
+          <div class="inp_wrap" style="margin-top: 2.5rem;">
+            <p>성별</p>
+
+            <div style="display: flex; width:100%;margin-top: 15px; ">
+              <div class="modal_ckbx">
+                <label class="mr20">
+                  <input name="primaryCheck" id="primaryCheck" type="radio">남자
+                </label>
+                <label>
+                  <input name="primaryCheck" id="primaryCheck" type="radio">여자
+                </label>
+              </div>
+            </div>
+            <div class="setting-bx" style="display: flex; margin-top: 2.5rem;">
+
+            </div>
+            <div>
+            </div>
+          </div>
+
+        </div>
+        <div class="modal-footer_in">
+          <button class="btn mint block" style="border-radius: 0;" id="primaryModal bt_agreement"
+            onclick="closePop('#primaryModal_02');">약관에s 동의합니다.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 회원 탈퇴 -->
+  <div class="modal fade" id="primaryModal_secession">
+    <div class="modal-dialog modal-sm_in modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">회원탈퇴</h5>
+          <p class="mt15 cBlue">메타스쿨 회원 탈퇴를 위해 회원님의 비밀번호를 입력해주세요.
+          </p>
+          <div class="close_btn">
+
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="inp_wrap">
+            <p>아이디</p>
+
+
+            <div class="inp_size fixinput"><input class="inp" type="text" value="mykim@sch.ac.kr
+              " disabled=""></div>
+          </div>
+          <div class="inp_wrap">
+            <p>비밀번호</p>
+
+            <div class="inp_size"><input class="inp" type="text" placeholder="10자 이상, 영문대소, 숫자, 특수문자 중 2개 포함 
+                ">
+            </div>
+            <div class="message-area">
+              <span>비밀번호를 입력해주세요.</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="bt mint" onclick="callPop('#primaryModal_secession01');">확인</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 탈퇴후 알림 -->
+
+  <div class="modal fade" id="primaryModal_secession01">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">회원탈퇴</h5>
+
+          <div class="close_btn">
+
+          </div>
+        </div>
+        <div class="modal-body">
+          <p>회원탈퇴 시 데이터 복구 및 동일한 아이디로
+            재가입이 되지 않습니다.
+            메타스쿨 회원탈퇴를 하시겠습니까?
+          </p>
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="bt"
+            onclick="closePop('#primaryModal_secession'),closePop('#primaryModal_secession01');">취소</button>
+          <button type="button" class="bt mint"
+            onclick="closePop('#primaryModal_secession'),closePop('#primaryModal_secession01');">탈퇴</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 비밀번호 변경 -->
+  <div class="modal fade" id="primaryModal_change_pw">
+    <div class="modal-dialog modal-sm_in modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">비밀번호 재설정</h5>
+
+          <div class="close_btn">
+
+          </div>
+        </div>
+        <div class="modal-body">
+          <div class="inp_wrap">
+            <p>새 비밀번호</p>
+
+
+            <div class="inp_size"><input class="inp" type="text" placeholder="10자 이상, 영문대소, 숫자, 특수문자 중 2개 포함 
+            ">
+            </div>
+            <div class="message-area">
+              <span>비밀번호를 입력해주세요.</span>
+            </div>
+          </div>
+          <div class="inp_wrap">
+            <p>새 비밀번호 확인</p>
+
+            <div class="inp_size"><input class="inp" type="text" placeholder="10자 이상, 영문대소, 숫자, 특수문자 중 2개 포함 
+                ">
+            </div>
+            <div class="message-area">
+              <span>비밀번호를 입력해주세요.</span>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" class="bt mint" onclick="closePop('#primaryModal_change_pw');">비밀번호 변경</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+
+
+
+    // 체크박스
+
+
+
+    $(document).ready(function () {
+      $('.check_box_wrap').on('click', '.check_box', function () {
+        var checkbox = $(this).children('input[type="checkbox"]');
+
+        if (checkbox.is(':checked')) {
+          $(this).addClass('on');
+          $(this).siblings().removeClass('on');
+        } else {
+
+        }
+
+      });
+    });
+
+
+
+
+
+
+// 체크박스 종료
+
+
+
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<title>메타버스</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="/src/assets/css/swiper.min.css" rel="stylesheet">
+<link href="/src/assets/css/base.css" rel="stylesheet">
+<script src="/src/assets/js/jquery.min.js"></script>
+<script src="/src/assets/js/swiper.js"></script>
+<script src="/src/assets/js/custom.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===== app ====== -->
+<div id="app">
+
+    <!-- ===== header ====== -->
+    <div id="header">
+        <div class="inner">
+           <h2>아이디 찾기</h2>
+           <p class="iphoneCheck"><input type="checkbox" value="1" id="bb1" name="bb1" checked=""><label class="check" for="bb1"></label></p>
+        </div>
+    </div>
+    <!-- ===== /header ====== -->
+
+	<!-- ===== container ====== -->
+    <div id="container">
+
+       <div class="wrap">
+        <!-- <div class="login_hd">
+            <h2>
+                아이디 찾기
+            </h2>
+        </div> -->
+        <div class="inp_bx_form">
+
+            <div class="inp_wrap">
+          <p>이름</p>
+
+                <div class="inp_size"><input class="inp" type="text" placeholder="이름"></div>
+            </div>
+            <div class="inp_wrap">
+                <p>질문선택</p>
+                <select name="question">
+                  <option value="">질문을 선택해주세요.</option>
+                  <option value="학생">자신의 인생 좌우명은?</option>
+                  <option value="회사원">타인이 모르는 자신만의 선체비밀이 있다면?</option>
+                  <option value="기타">친구들에게 공개하지 않은 어릴 적 별명이 있다면?</option>
+              </select>
+            </div>
+            <div class="inp_wrap">
+                <p>답변</p>
+                <div class="inp_size"><input type="text" class="inp" placeholder="답변을 입력해주세요."></div>
+            </div>
+            <div class="inp_size mt40">
+              <button type="button" class="bt-basic">확인</button>
+            </div>
+
+            <div class="find_id_foot">
+              <div class="find_id_foot_contents">
+                <p>지금 로그인하러 가기</p>
+                <a href="javascript:callPop('#popArlim');" class="btn radius sm">로그인</a>
+              </div>
+              <div class="find_id_foot_contents">
+                <p>아직 SGM 회원이 아니신가요?</p>
+                <a href="javascript:callPop('#popArlim');" class="btn radius sm">회원가입</a>
+              </div>
+              <div class="find_id_foot_contents">
+                <p>고객센터 : 070-0000-0000</p>
+              </div>
+            </div>
+        </div>
+
+       </div>
+
+
+	</div>
+    <!-- ===== /container ====== -->
+
+</div>
+<!-- ===== /app ====== -->
+
+<div class="modal fade" id="popArlim">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">아이디 찾기</h5>
+      </div>
+      <div class="modal-body">
+        <p>아이디를 찾으시겠습니까?  </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="bt" onclick="closePop('#popArlim');">아니오</button>
+
+		<button type="button" class="bt mint" onclick="closePop('#popArlim');">예</button>
+
+		</div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>

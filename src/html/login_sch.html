@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<title>메타버스</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="/src/assets/css/swiper.min.css" rel="stylesheet">
+<link href="/src/assets/css/base.css" rel="stylesheet">
+<script src="/src/assets/js/jquery.min.js"></script>
+<script src="/src/assets/js/swiper.js"></script>
+<script src="/src/assets/js/custom.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===== app ====== -->
+<div id="app">
+
+    <!-- ===== header ====== -->
+    <div id="header">
+        <div class="inner">
+           <h2>순천향 메타버스</h2>
+           <p class="iphoneCheck"><input type="checkbox" value="1" id="bb1" name="bb1" checked=""><label class="check" for="bb1"></label></p>
+        </div>
+    </div>
+    <!-- ===== /header ====== -->
+
+	<!-- ===== container ====== -->
+    <div id="container">
+
+        <div class="login-wr">
+
+            <div class="login-input">
+                <div class="login-form">
+                    <p class="inp-bx" ><input type="text" class="inp" placeholder="아이디"><button class="del">삭제</button></p>
+                    <p class="inp-bx"><input type="password" class="inp" placeholder="비밀번호"></p>
+                    <p class="inp-bx"><button type="button" class="bt-login">로그인</button></p>
+                    <div class="dv-chk">
+                        <div class="chk_wrap">
+                            <label><input type="checkbox" name="aa" checked>자동 로그인</label>
+                            <label><input type="checkbox" name="aa">아이디 저장</label>
+                        </div>
+                    </div>
+                </div>  
+                <dl class="tbx">
+                   
+                    <dd>
+                      
+                        <div class="btn-box">
+
+                            <a href="javascript:callPop('#popArlim');" class="btn radius sm">아이디찾기</a>
+
+							<a href="javascript:;" class="btn radius sm">비밀번호찾기</a>
+
+							<a href="javascript:;" class="btn radius sm">회원가입</a>
+
+						</div>
+                    </dd>
+                </dl>
+            </div>
+
+        </div>
+
+
+	</div>
+    <!-- ===== /container ====== -->
+
+</div>
+<!-- ===== /app ====== -->
+
+<div class="modal fade" id="popArlim">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">아이디 찾기</h5>
+      </div>
+      <div class="modal-body">
+        <p>아이디를 찾으시겠습니까?  </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="bt" onclick="closePop('#popArlim');">아니오</button>
+
+		<button type="button" class="bt mint" onclick="closePop('#popArlim');">예</button>
+
+		</div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
