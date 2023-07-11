@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<title>메타버스</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="/src/assets/css/swiper.min.css" rel="stylesheet">
+<link href="/src/assets/css/base.css" rel="stylesheet">
+<script src="/src/assets/js/jquery.min.js"></script>
+<script src="/src/assets/js/swiper.js"></script>
+<script src="/src/assets/js/custom.js"></script>
+
+</head>
+
+<body  class="main_bg">
+
+<!-- ===== app ====== -->
+<div id="app" class="grid_bg">
+
+
+    <!-- ===== header ====== -->
+   
+    <!-- ===== /header ====== -->
+
+	<!-- ===== container ====== -->
+    <div class="full_container">
+      <div class="full_wrap">
+        <div class="full_page">
+
+          <div class="schedule_add_hd">
+            <h2>수강신청</h2>
+            <div class="close_btn">
+
+            </div>
+          </div>
+          <div class="schedule_add_table">
+            <div class="add_table_wrap">
+              <table>
+                <tr>
+                  <th>
+                    강의명
+                  </th> 
+                  <td class="add_table_title" style="    border-top: 1px solid #94B9F3;">
+                    [HSK6급] HSK 기초어법 마스터
+                  </td>
+                </tr>
+                <tr>
+                  <th>
+                    강의시간
+                  </th>
+                  <td>
+                    월,수,금 (월 10회) 10:00~ 11:50
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="add_table_img">
+              <div>
+                <img src="/src/assets/images/hqdefault 1.png" alt="">
+              </div>
+
+            </div>
+
+          </div>
+          <div class="schedule_add_hd_02">
+            <h2>
+              강의정보
+            </h2> 
+          </div>
+          <div class="schedule_add_table_02">
+            <table>
+              <tr>
+                <th>
+                  <img src="/src/assets/images/profile.png" alt="">
+                </th>
+                <td>
+                  <h4>훙길동 교수님</h4>
+                  <p>現 순천향대 공자아카데미 교수중국어 강의 8년 경력무적新HSK 기출 모의고사 저서現 순천향대 공자아카데미 교수중국어 강의 8년 경력무적新HSK 기출 모의고사 저서現 순천향대 공자아카데미 교수중국어 강의 8년 경력무적新HSK 기출 모의고사 저서</p>
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <h4>강의설명</h4>
+                </th>
+                <td>
+                  <p>1. HSK에 빈출 되는 문장이나 어휘를 활용한 실전대비 강의<br>
+                    2. 배운 어법을 활용해 실용적인 회화표현 정리<br>
+                    3. 중국어의 기초 어법이론을 체계적으로 정리할 수 있는 강의</p>
+                </td>
+              </tr>
+            </table>
+
+          </div>
+          <div class="schedule_add_btn">
+            <div>
+              <button type="button" class="bt-basic" onclick="">수강신청</button>
+            </div>
+          </div>
+          <div class="schedule_add_line">
+
+          </div>
+          <div class="schedule_add_hd_02">
+            <h2>
+              강의목록
+            </h2> 
+          </div>
+          <div class="schedule_add_list">
+            <ul>
+              <li>[01강] 오리엔테이션</li>
+              <li>[01강] 오리엔테이션</li>
+              <li>[01강] 오리엔테이션</li>
+              <li>[01강] 오리엔테이션</li>
+              <li>[01강] 오리엔테이션</li>
+              <li>[01강] 오리엔테이션</li>
+              <li>[01강] 오리엔테이션</li>
+              <li>[01강] 오리엔테이션</li>
+              <li>[01강] 오리엔테이션</li>
+            </ul>
+
+          </div>
+          
+        </div>
+
+
+      </div>
+
+    </div>
+    <!-- ===== /container ====== -->
+
+</div>
+<!-- ===== /app ====== -->
+
+<div class="modal fade" id="popArlim">
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">아이디 확인</h5>
+      </div>
+      <div class="modal-body">
+        <p>아이디를 찾으시겠습니까?  </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="bt" onclick="closePop('#popArlim');">아니오</button>
+
+		<button type="button" class="bt mint" onclick="closePop('#popArlim');">예</button>
+
+		</div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  $(document).ready(function(){
+    const tabMenu = document.querySelectorAll('.schedule_tab ul li');
+const tabContent = document.querySelectorAll('.schedule_menu_wrap > div');
+const highLight = document.querySelector('.highlight');
+
+tabMenu.forEach(function(item, idx){
+  item.addEventListener('click',function(e){
+    e.preventDefault();
+    showContent(idx);
+    moveHighLight(idx);
+    $(this).addClass('on')
+    $(this).siblings().removeClass('on')
+    console.log();
+  });
+});
+
+function showContent(num){
+  tabContent.forEach(function(item){
+    item.style.display='none';
+  });
+  tabContent[num].style.display = 'block';
+}
+
+function moveHighLight(num){
+  const newLetf = tabMenu [num].offsetLeft;
+  const newWidth = tabMenu [num].offsetWidth;
+  highLight.style.left = newLetf + 'px';
+  highLight.style.width = newWidth + 'px';
+  console.log(tabMenu [num].offsetLeft)
+}
+  });
+
+
+
+</script>
+
+</body>
+</html>

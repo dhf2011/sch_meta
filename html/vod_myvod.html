@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="email=no">
+  <title>메타버스</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="/src/assets/css/swiper.min.css" rel="stylesheet">
+  <link href="/src/assets/css/base.css" rel="stylesheet">
+  <script src="/src/assets/js/jquery.min.js"></script>
+  <script src="/src/assets/js/swiper.js"></script>
+  <script src="/src/assets/js/custom.js"></script>
+
+</head>
+
+<body class="main_bg">
+
+  <!-- ===== app ====== -->
+  <div id="app" class="grid_bg">
+
+
+    <!-- ===== header ====== -->
+    <div id="header">
+      <div class="inner_02">
+        <h2>MY&nbsp;&nbsp;&nbsp;VOD</h2>
+        <div class="hd_icon">
+          <div class="space_more_list">
+            <ul>
+              <li>
+                <a>강의실</a>
+              </li>
+              <li>
+                <a>행정지원실</a>
+              </li>
+              <li>
+                <a>스터디Cafe</a>
+              </li>
+              <li>
+                <a>VOD자료실</a>
+              </li>
+              <li>
+                <a>VOD자료실</a>
+              </li>
+              <li>
+                <a>VOD자료실</a>
+              </li>
+              <li>
+                <a>VOD자료실</a>
+              </li>
+              <li>
+                <a>VOD자료실</a>
+              </li>
+            </ul>
+          </div>
+          <div class="hd_icon_more">
+            <img src="/src/assets/images/ic_more.svg" alt="">
+
+          </div>
+          <div class="hd_icon_rap">
+            <div class="hd_icon_alarm">
+              <img src="/src/assets/images/ic_alarm.svg" alt="">
+            </div>
+            <div class="hd_icon_registration">
+              <img src="/src/assets/images/ic_registration.svg" alt="">
+            </div>
+            <div class="hd_icon_exit">
+              <img src="/src/assets/images/ic_exit.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ===== /header ====== -->
+
+    <!-- ===== container ====== -->
+    <div id="container">
+
+      <div class="wrap">
+        <!-- <div class="login_hd">
+            <h2>
+                아이디 찾기
+            </h2>
+        </div> -->
+        <div class="page_bg">
+          <div class="page_content">
+         
+            <div class="schedule_menu_wrap">
+              <div class="menu_01" style="display: block;">
+                <div class="hd_search_wrap">
+                  <div class="hd_search_ic">
+                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                  </div>
+                  <input type="search" name="" id="" placeholder="검색어를 입력하세요.">
+                </div>
+                <div class="question_hd_wrap">
+                 
+                  <ul class="table_inp_toggle">
+                    <li class="on">
+
+                      <select id="category" name="category">
+                        <option value="">1차 케테고리 선택</option>
+                        <option value="all">전체</option>
+                        <option value="lecture">강의</option>
+                        <option value="seminar">세미나</option>
+                      
+
+                      </select>
+                    </li>
+
+                    <li class="on">
+
+                      <select id="category" name="category">
+                        <option value="">2차 케테고리 선택</option>
+                        <option value="all">전체</option>
+                        <option value="gbs">GBS</option>
+                        <option value="Confucius">공자학당</option>
+                        <option value="staff">교직원대상</option>
+                        <option value="after">방과후교실</option>
+                        <option value="learning">평생학습관</option>
+
+
+                      </select>
+                    </li>
+                    <li class="on">
+
+                      <select id="category" name="category">
+                        <option value="">3차 케테고리 선택</option>
+                        <option value="학생">all</option>
+
+                      </select>
+                    </li>
+
+
+
+                  </ul>
+                 
+                </div>
+                <div class="list_contents">
+                  <ul>
+                    <li>
+                      <!--  조건검색 결과 -->
+                      <div class="search_title">
+                        <p>검색 결과 총 6건</p>
+                      </div>
+                      
+
+                      <table class="schedule_list">
+                        <colgroup>
+                          <col style="width:80px" />
+                          <col style="width:*" />
+                          <col style="width:15%" />
+                          <col style="width:20%" />
+                          <col style="width:66px" />
+                      </colgroup>
+                         <tr>
+                              <td><img src="/src/assets/images/Mask group.png" alt=""></td>
+                              <td><p>[HSK6급] HSK 기초어법 마스터 <span><button class="btn_sm_basic bRed">NEW</button></span></p></td>
+                              <td><p class="c">홍길동 교수 <br>강의/공자아카데미
+                              </p></td>
+                            
+                              <td> <p class="c">2023.01.27</p></td>
+                                  <td><a href="/src/html/schedule_add.html"><button class="btn_basic bRed" >담기 취소</button></a></td>
+                         </tr>
+                        
+                         <tr>
+                              <td><img src="/src/assets/images/Mask group2.png" alt=""></td>
+                              <td><p >[HSK6급] HSK 기초어법 마스터 </p></td>
+                              <td><p class="c">홍길동 교수 <br>
+                                강의/공자아카데미
+                              </p></td>
+                            
+                              <td> <p class="c">2023.01.27</p></td>
+                                  <td><button class="btn_basic bRed">담기 취소</button></td>
+                         </tr>
+                         <tr>
+                              <td><img src="/src/assets/images/Mask group2.png" alt=""></td>
+                              <td><p>[HSK6급] HSK 기초어법 마스터 </p></td>
+                              <td><p class="c">홍길동 교수 <br>
+                                강의/공자아카데미
+                              </p></td>
+                            
+                              <td> <p class="c">2023.01.27</p></td>
+                                  <td><button class="btn_basic bRed">담기 취소</button></td>
+                         </tr>
+                         <tr>
+                              <td><img src="/src/assets/images/Mask group2.png" alt=""></td>
+                              <td><p>[HSK6급] HSK 기초어법 마스터 </p></td>
+                              <td><p class="c">홍길동 교수 <br>
+                                강의/공자아카데미
+                              </p></td>
+                            
+                              <td> <p class="c">2023.01.27</p></td>
+                                  <td><button class="btn_basic bRed">담기 취소</button></td>
+                         </tr>
+                         <tr>
+                              <td><img src="/src/assets/images/Mask group2.png" alt=""></td>
+                              <td><p>[HSK6급] HSK 기초어법 마스터 </p></td>
+                              <td><p class="c">홍길동 교수 <br>
+                                강의/공자아카데미
+                              </p></td>
+                            
+                              <td> <p class="c">2023.01.27</p></td>
+                                  <td><button class="btn_basic bRed">담기 취소</button></td>
+                         </tr>
+                         <tr>
+                              <td><img src="/src/assets/images/Mask group2.png" alt=""></td>
+                              <td><p>[HSK6급] HSK 기초어법 마스터 </p></td>
+                              <td><p class="c">홍길동 교수 <br>
+                                강의/공자아카데미
+                              </p></td>
+                            
+                              <td> <p class="c">2023.01.27</p></td>
+                                  <td><button class="btn_basic bRed">담기 취소</button></td>
+                         </tr>
+                         
+                        
+                      </table>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+  
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+    <!-- ===== /container ====== -->
+
+  </div>
+  <!-- ===== /app ====== -->
+
+  <div class="modal fade" id="popArlim">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">아이디 확인</h5>
+        </div>
+        <div class="modal-body">
+          <p>아이디를 찾으시겠습니까? </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="bt" onclick="closePop('#popArlim');">아니오</button>
+
+          <button type="button" class="bt mint" onclick="closePop('#popArlim');">예</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    $(document).ready(function () {
+
+
+
+
+      $('.sch_btn').click(function () {
+        $('.sch_btn_wrap input').fadeToggle();
+      })
+
+
+    });
+
+
+
+  </script>
+  <script src="https://kit.fontawesome.com/58a79970da.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

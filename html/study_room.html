@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<title>메타버스</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="/src/assets/css/swiper.min.css" rel="stylesheet">
+<link href="/src/assets/css/base.css" rel="stylesheet">
+<script src="/src/assets/js/jquery.min.js"></script>
+<script src="/src/assets/js/swiper.js"></script>
+<script src="/src/assets/js/custom.js"></script>
+
+</head>
+
+<body  class="study_bg">
+
+</div>
+<!-- ===== app ====== -->
+<div id="app" class="">
+  <div class="background_black">
+
+  </div>
+
+    <!-- ===== header ====== -->
+    <div id="header">
+        <div class="inner_02">
+           <h2>스터디</h2>
+           <div class="hd_icon">
+            <div class="space_more_list">
+              <ul>
+                <li>
+                  <a>강의실</a>
+                </li>
+                <li>
+                  <a>행정지원실</a>
+                </li>
+                <li>
+                  <a>스터디Cafe</a>
+                </li>
+                <li>
+                  <a>VOD자료실</a>
+                </li>
+                <li>
+                  <a>VOD자료실</a>
+                </li>
+                <li>
+                  <a>VOD자료실</a>
+                </li>
+                <li>
+                  <a>VOD자료실</a>
+                </li>
+                <li>
+                  <a>VOD자료실</a>
+                </li>
+              </ul>
+             </div>
+            <div class="hd_icon_more">
+             <img src="/src/assets/images/ic_more.svg" alt="">
+             
+            </div>
+            <div class="hd_icon_rap">
+              <div class="hd_icon_alarm">
+                <img src="/src/assets/images/ic_alarm.svg" alt="">
+              </div>
+              <div class="hd_icon_registration">
+                <img src="/src/assets/images/ic_registration.svg" alt="">
+              </div>
+              <div class="hd_icon_exit">
+                <img src="/src/assets/images/ic_exit.svg" alt="">
+              </div>
+            </div>
+           </div>
+        </div>
+    </div>
+    <!-- ===== /header ====== -->
+
+	<!-- ===== container ====== -->
+    <div id="container">
+      <div class="room_add_btn">
+       <a href="javascript:callPop('#popArlim');">
+          <button>
+            방개설
+          </button>
+       </a>
+
+      </div>
+
+       <div class="wrap">
+        <!-- <div class="login_hd">
+            <h2>
+                아이디 찾기
+            </h2>
+        </div> -->
+        <div class="inp_bx_form">
+          <ul class="study_room_list">
+            <li >
+              <div class="inp_size room_lock" >
+                <a href="javascript:callPop('#popArlim02');" class="bt_study">어서오세요 누구의방입니다.</a>
+                <span>3 / 5</span>
+                <img src="/src/assets/images/lock.svg" alt="">
+              </div>
+             
+            </li>
+            <li>
+              <div class="inp_size" >
+                <a href="/index.html" class="bt_study">어서오세요 누구의방입니다.</a>
+                <span>3 / 5</span>
+              </div>
+             
+            </li>
+            <li>
+              <div class="inp_size room_full" >
+                <a href="/index.html" class="bt_study room_full">어서오세요 누구의방입니다.</a>
+                <span>5 / 5</span>
+              </div>
+             
+            </li>
+            <li>
+              <div class="inp_size" >
+                <a href="/index.html" class="bt_study room_empty"></a>
+              </div>
+             
+            </li>
+            <li>
+              <div class="inp_size" >
+                <a href="/index.html" class="bt_study room_empty"></a>
+              </div>
+             
+            </li>
+            <li>
+              <div class="inp_size" >
+                <a href="/index.html" class="bt_study room_empty"></a>
+              </div>
+             
+            </li>
+            <li>
+              <div class="inp_size" >
+                <a href="/index.html" class="bt_study room_empty"></a>
+              </div>
+             
+            </li>
+            <li>
+              <div class="inp_size" >
+                <a href="/index.html" class="bt_study room_empty"></a>
+              </div>
+             
+            </li>
+           
+            
+          </ul>
+           
+            
+            
+          
+
+          
+        </div>
+
+       </div>
+
+
+	</div>
+    <!-- ===== /container ====== -->
+
+</div>
+<!-- ===== /app ====== -->
+
+<div class="modal fade" id="popArlim">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">방 개설</h5>
+      </div>
+      <div class="modal-body">
+        <div class="inp_wrap">
+          <p>방제목 <span style="font-size:1.2rem; color:#828282"> (개설할 방 이름을 입력해주세요.) </span> 
+          </p>
+
+                <div class="inp_size"><input class="inp" type="text" placeholder="30자 이내로 방이름을 정해주세요 
+
+
+                  "></div>
+            </div>
+            <div class="inp_wrap" style="margin-top: 2.5rem;">
+              <p>비밀번호를 설정하시겠습니까? 
+              </p>
+    
+              <div style="display: flex; width:100%;margin-top: 15px; ">
+                  <div class="modal_ckbx">
+                       <label class="mr20">
+                           <input name="countryCheck" id="countryCheck" type="radio">예
+                      </label>
+                       <label class="mr20">
+                           <input name="countryCheck" id="countryCheck" type="radio">아니요
+                      </label>
+                      
+                  </div>
+             </div>  
+            
+            <div>
+            </div>
+          </div>
+          <div class="inp_wrap">
+            <p>비밀번호
+            </p>
+  
+                  <div class="inp_size"><input class="inp" type="text" placeholder="PASSWORD 
+  
+  
+                    "></div>
+              </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="bt" onclick="closePop('#popArlim');">아니오</button>
+
+		<button type="button" class="bt mint" onclick="closePop('#popArlim');">예</button>
+
+		</div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="popArlim02">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">비밀번호</h5>
+      </div>
+      <div class="modal-body">
+        <div class="inp_wrap">
+          <p>비밀번호 <span style="font-size:1.2rem; color:#828282"> (스터디 방 비밀번호를 입력해주세요.  
+            비밀번호는 영문, 숫자로 구성되어 있습니다.) 
+             </span> 
+          </p>
+
+                <div class="inp_size"><input class="inp" type="text" placeholder="PASSWORD
+ 
+
+
+                  "></div>
+            </div>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="bt" onclick="closePop('#popArlim02');">아니오</button>
+
+		<button type="button" class="bt mint" onclick="closePop('#popArlim02');">예</button>
+
+		</div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>

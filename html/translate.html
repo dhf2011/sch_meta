@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google 번역</title>
+  <script src="https://kit.fontawesome.com/58a79970da.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    /* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.translation-box{display: flex; gap: 10px;}
+
+.translation-box textarea {
+    flex: 1;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 8px;
+  height: 150px;
+  padding: 10px;
+  resize: none;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.result {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.language-select {
+    align-items: center;
+    display: flex;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.language-select select {
+    flex: 1;
+  font-size: 16px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.translate-button {
+    display: flex;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.translate-button button {
+    flex: 1;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.translate-button button:hover {
+  background-color: #3367d6;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #888;
+}
+
+.right-left_ic{margin: 0 10px;}
+.mt40{margin-top: 40px;}
+.mt15{margin-top:15px;}
+.xmark_wrap{position: absolute; top: 0; right: 0; padding: 20px;}
+
+</style>
+<body>
+  <div class="container">
+    <div class="xmark_wrap">
+        <i class="fa-solid fa-xmark fa-xl"></i>
+      </div>
+    <header class="header">
+      <h1>메타버스 번역</h1>
+      
+    </header>
+
+    <div class="language-select mt40">
+        <select id="source-language">
+          <option value="en">한국어</option>
+          <option value="ko">중국어(간체)</option>
+          <!-- 다른 언어 옵션들 -->
+        </select>
+        <i class="fa-solid fa-right-left right-left_ic"></i>
+        <select id="target-language">
+          <option value="ko">중국어(간체)</option>
+          <option value="en">한국어</option>
+          <!-- 다른 언어 옵션들 -->
+        </select>
+      </div>
+    <div class="translation-box">
+      <textarea id="source-text" placeholder="번역할 내용을 입력하세요..."></textarea>
+      <textarea id="source-text" placeholder="번역할 내용을 입력하세요..."></textarea>
+    </div>
+    
+    
+    <div class="translate-button mt40">
+      <button id="translate-btn">번역</button>
+    </div>
+    <footer class="footer">
+      <p>저작권 © 2023 메타버스 번역</p>
+    </footer>
+  </div>
+</body>
+</html>

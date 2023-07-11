@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<title>메타버스</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="/src/assets/css/swiper.min.css" rel="stylesheet">
+<link href="/src/assets/css/base.css" rel="stylesheet">
+<script src="/src/assets/js/jquery.min.js"></script>
+<script src="/src/assets/js/swiper.js"></script>
+<script src="/src/assets/js/custom.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===== app ====== -->
+<div id="app">
+
+    <!-- ===== header ====== -->
+    <div id="header">
+        <div class="inner">
+           <h2>회원가입</h2>
+           <p class="iphoneCheck"><input type="checkbox" value="1" id="bb1" name="bb1" checked=""><label class="check" for="bb1"></label></p>
+        </div>
+    </div>
+    <!-- ===== /header ====== -->
+
+	<!-- ===== container ====== -->
+    <div id="container">
+
+       <div class="wrap">
+        <!-- <div class="login_hd">
+            <h2>
+                아이디 찾기
+            </h2>
+        </div> -->
+        <div class="inp_bx_form">
+            <div class="join_nav">
+                <div class="join_nav_num checkde">
+                  <p>01. 기본정보 등록 </p>
+                </div> &nbsp;
+                > &nbsp;
+                <div class="join_nav_num">
+<p>02. 본인 이메일 확인</p>
+                </div>&nbsp;
+                > &nbsp;
+                <div class="join_nav_num">
+<p>03. 회원가입 완료</p>
+                </div>
+            </div>
+
+            <div class="inp_wrap">
+          <p>이름</p>
+
+                <div class="inp_size"><input class="inp" type="text" placeholder="본인 이름을 입력해주세요. 
+                    "></div>
+            </div>
+            <div class="inp_wrap">
+          <p>닉네임</p>
+
+                <div class="inp_size"><input class="inp" type="text" placeholder="닉네임을 입력해주세요. 
+                    "></div>
+            </div>
+            <div class="inp_wrap">
+          <p>아이디</p>
+
+                <div class="inp_size"><input class="inp" type="text" placeholder="아이디인 이메일 주소를 입력해주세요.
+                    "></div>
+            </div>
+            <div class="inp_wrap">
+          <p>비밀번호</p>
+
+          <div class="inp_size"><input type="password" class="inp" placeholder="10자 이상, 영문대소, 숫자, 특수문자 중 2개 포함 
+            "></div>
+            </div>
+            <div class="inp_wrap">
+          <p>비밀번호 확인</p>
+
+          <div class="inp_size"><input type="password" class="inp" placeholder="10자 이상, 영문대소, 숫자, 특수문자 중 2개 포함 
+            "></div>
+            </div>
+
+            <div class="inp_wrap">
+                <p>질문선택</p>
+                <select name="question">
+                  <option value="">질문을 선택해주세요.</option>
+                  <option value="학생">자신의 인생 좌우명은?</option>
+                  <option value="회사원">타인이 모르는 자신만의 선체비밀이 있다면?</option>
+                  <option value="기타">친구들에게 공개하지 않은 어릴 적 별명이 있다면?</option>
+              </select>
+            </div>
+            <div class="inp_wrap">
+                <p>답변</p>
+                <div class="inp_size"><input type="text" class="inp" placeholder="답변을 입력해주세요."></div>
+            </div>
+          
+
+            <div class="dv-chk mb-3 mt40">
+            	<label>
+            		<input id="basicCheck" onclick="basicCheckClick(1);" name="basicCheck" type="checkbox">기본 약관 동의 ( 필수 )
+           		</label>
+         		<a data-toggle="modal" href="javascript:callPop('#primaryModal');" data-target="#primaryModal">약관보기</a>
+            </div>
+            <div class="dv-chk mb-3 mt10">
+            	<label>
+            		<input id="basicCheck" onclick="basicCheckClick(1);" name="basicCheck" type="checkbox">마켓팅 활용 동의 ( 선택 )
+           		</label>
+         		<a data-toggle="modal" href="javascript:callPop('#primaryModal_02');" data-target="#primaryModal">약관보기</a>
+            </div>
+            <div class="inp_size mt40">
+                <button type="button" class="bt-basic">회원가입</button>
+              </div>
+        </div>
+
+       </div>
+
+
+	</div>
+    <!-- ===== /container ====== -->
+
+</div>
+<!-- ===== /app ====== -->
+
+
+<div class="modal" id="primaryModal"  aria-hidden="true">
+    <div class="modal-dialog_in modal-sm_in modal-dialog-centered_in">
+      <div class="modal-content_in">
+          <div class="modal_close" onclick="basicCheckClick(1);">
+              <img src="/image/close.png" alt="">
+          </div>
+        <div class="modal-body_in" style="overflow:auto">
+          <div>
+              <div class="modal-header_in">
+                  <h5 class="modal-title_in">회원가입 약관
+                  </h5>
+                </div>
+                <div class="modal-agreement_in">
+                  <p id="primaryModalText1">
+                    까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?
+                    까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?
+                    까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?
+                    까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?
+                </p>
+                </div>
+          </div>
+          <div>
+              <div class="modal-header_in">
+                  <h5 class="modal-title_in">개인정보 보호처리 방침
+                  </h5>
+                </div>
+                <div class="modal-agreement_in">
+                  <p id="primaryModalText2">
+                    까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?
+                 </p>
+                </div>
+          </div>
+          <div class="setting-bx" style="display: flex; margin-top: 2.5rem;">
+              <div style="display: flex; width:100%; justify-content: center;">
+                   <div class="modal_ckbx">
+                        <label>
+                            <input name="primaryCheck" id="primaryCheck" type="checkbox">광고 수신 동의 (선택)
+                       </label>
+                   </div>
+              </div>
+          </div>
+          <div>
+          </div>
+        </div>
+        <div class="modal-footer_in">
+          <button class="btn mint block" style="border-radius: 0;" id="primaryModal bt_agreement" onclick="closePop('#primaryModal');">약관에 동의합니다.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="modal" id="primaryModal_02"  aria-hidden="true">
+    <div class="modal-dialog_in modal-sm_in modal-dialog-centered_in">
+      <div class="modal-content_in">
+          <div class="modal_close" onclick="basicCheckClick(1);">
+              <img src="/image/close.png" alt="">
+          </div>
+        <div class="modal-body_in" style="overflow:auto">
+          <div>
+              <div class="modal-header_in">
+                  <h5 class="modal-title_in">마케팅 활용 동의 약관
+                  </h5>
+                </div>
+                <div class="modal-agreement_in">
+                  <p id="primaryModalText1">
+                    까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?
+                    까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?
+                    까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?
+                    까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?
+                    <div>
+                        <div class="dv-chk mt5" style="text-align: end;">
+                            <label>
+                                <input id="basicCheck" onclick="basicCheckClick(1);" name="basicCheck" type="checkbox">마켓팅 활용 동의 ( 선택 )
+                               </label>
+                        </div>
+                    </div>
+                </p>
+                </div>
+          </div>
+          <div>
+              <div class="modal-header_in">
+                  <h5 class="modal-title_in">광고 수신 동의 약관
+                  </h5>
+                </div>
+                <div class="modal-agreement_in">
+                  <p id="primaryModalText2">
+                    까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?  로그아웃 하시겠습니까?
+                    <div class="dv-chk mt5" style="text-align: end;">
+                        <label>
+                            <input id="basicCheck" onclick="basicCheckClick(1);" name="basicCheck" type="checkbox">광고 수신 동의 ( 선택 )
+                           </label>
+                    </div>
+                 </p>
+                </div>
+          </div>
+          <div class="inp_wrap" style="margin-top: 2.5rem;">
+            <p>생년월일</p>
+  
+            <div class="inp_size"><input type="password" class="inp" placeholder="8자리로 입력해주세요( ex 19990722)"></div>
+              </div>
+          <div class="inp_wrap" style="margin-top: 2.5rem;">
+            <p>성별</p>
+  
+            <div style="display: flex; width:100%;margin-top: 15px; ">
+                <div class="modal_ckbx">
+                     <label class="mr20">
+                         <input name="primaryCheck" id="primaryCheck" type="radio">남자
+                    </label>
+                     <label>
+                         <input name="primaryCheck" id="primaryCheck" type="radio">여자
+                    </label>
+                </div>
+           </div>  
+          <div class="setting-bx" style="display: flex; margin-top: 2.5rem;">
+             
+          </div>
+          <div>
+          </div>
+        </div>
+        <div class="modal-footer_in">
+          <button class="btn mint block" style="border-radius: 0;" id="primaryModal bt_agreement" onclick="closePop('#primaryModal_02');">약관에s 동의합니다.</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
