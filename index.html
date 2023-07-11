@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>메타버스</title>
+
+	<style type="text/css">
+		html, body { margin: 0; padding: 0; }
+		ul, li { padding: 0; margin: 0; list-style: none; }
+		body, td { color: #6b6b6b; font-style: normal; font-variant: normal; font-size: 11px; line-height: normal; font-family: "맑은 고딕", dotum, 돋움, Sans-Serif; }
+		table { margin-bottom: 150px; border-collapse: collapse; border-spacing: 0; }
+		#g_header h1 { height: 60px; line-height: 45px; padding-left: 28px; margin-top: 0; color: #fff; background: #424242; }
+		#g_body { padding: 0 30px; }
+		.guide_table { width: 100%; }
+		.guide_table thead th { background: #f1f1f1; padding: 3px; border: solid 1px #dadada; }
+		.guide_table tbody td { padding: 3px; border: solid 1px #dadada; }
+		.guide_table tbody td.filelink a { text-decoration: none; color: #0177bd; }
+		.guide_table tr.dep01 td { border-top: solid 2px #dadada; }
+		.guide_table td.filelink a { }
+		.red { color: #ff0000; }
+		.nofile { background: #D9E3E6; font-weight: bold; text-align: center; }
+		#g_footer { padding: 30px; text-align: right; }
+		.eng td { background: #e3edec; }
+		.issue { font-size: 11px; font-family: '돋움'; color: #000; }
+		.issue li { margin-top: 10px; }
+		.issue li:first-child { margin-top: 0; }
+		.issue strong { margin-bottom: 3px; display: block; color: #ff6000; }
+		.issue span { color: #ff6000; }
+		.color { background-color: #bbf7fe; }
+		table tr td:first-child { text-align: center; }
+		.design_summary_web,
+		.design_summary_tab,
+		.design_summary_mob { display: inline-block; color: rosybrown; font-weight: bold; font-size: 12px; margin-right: 30px; }
+		.coding_summary_web,
+		.coding_summary_tab,
+		.coding_summary_mob { display: inline-block; color: red; font-weight: bold; font-size: 12px; margin-right: 30px; }
+		.dev_summary { display: inline-block; color: green; font-weight: bold; font-size: 12px; margin-right: 30px; }
+		.coding_stat_web,
+		.coding_stat_tab,
+		.coding_stat_mob { background: #5789D9; color: #fff; }
+		.dev_stat_web,
+		.dev_stat_web,
+		.dev_stat_web { background: rosybrown; color: #fff; }
+		.bg_gray { background: #f0f0f0; }
+		.tab_li > li { float: left; width: 100px; height: 30px; line-height: 30px; text-align: center; background: #424242; color: #fff; margin-right: 5px; margin-bottom: 5px; }
+		.tab_li > li > a { color: #fff; text-decoration: none; display: block; }
+		.tab_li > li.on { font-weight: bold; text-decoration: underline; font-size: 16px; }
+		td strong { color: red; }
+		.auto-style1 { height: 20px; }
+		.auto-style2 { background: #ddffca; height: 20px; }
+        
+        ul > li + li{ margin-top: 10px;}
+        
+        .f1213{ color: #ff0000; font-weight: 600;}
+        
+	</style>
+
+
+	<script src="./asset/js/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(function () {
+			var page_length = $('.guide_table tbody .coding_stat_web').length;
+			var page_length_dev = $('.guide_table tbody .dev_stat_web').length;
+
+			set_design_process = function () {
+
+				//web
+				var design_ended_web = 0;
+				$('.design_stat_web').each(function () {
+					var design_stat_web = $(this).text();
+					if (design_stat_web == '완료') {
+						design_ended_web = design_ended_web + 1;
+					}
+				});
+				var per_complete_web = parseInt((design_ended_web / page_length) * 100);
+				$('.design_summary_web').text('디자인(웹) 진행률 [ ' + design_ended_web + ' page / ' + page_length + ' page] ' + per_complete_web + '% 완료');
+				//web end
+
+			}
+
+			set_coding_process = function () {
+
+				//web
+				var coding_ended_web = 0;
+				$('.coding_stat_web').each(function () {
+					var coding_stat_web = $(this).text();
+					if (coding_stat_web == '완료') {
+						coding_ended_web = coding_ended_web + 1;
+					}
+				});
+				var per_complete_web = parseInt((coding_ended_web / page_length) * 100);
+				$('.coding_summary_web').text('코딩(웹) 진행률 [ ' + coding_ended_web + ' page / ' + page_length + ' page] ' + per_complete_web + '% 완료');
+			}
+
+			set_dev_process = function () {
+				var dev_ended = 0;
+				$('.dev_stat_web').each(function () {
+					var dev_stat = $(this).text();
+					if (dev_stat == '완료') {
+						dev_ended = dev_ended + 1;
+					}
+				});
+				var per_complete = parseInt((dev_ended / page_length_dev) * 100);
+				$('.dev_summary').text('개발 진행률 [ ' + dev_ended + ' page / ' + page_length_dev + ' page] ' + per_complete + '% 완료');
+			}
+
+			//set_design_process();
+			set_coding_process();
+			set_dev_process();
+
+
+			$('a').each(function () {
+				$(this).attr('target', '_blank')
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<div id="g_header">
+		<h1 onclick="location.href='./noBlank.html'">메타버스</h1>
+	</div>
+	<div id="g_body">
+		<div class="contents">
+			<h3>Flie List</h3>
+		
+	<p class="guide_summary">
+			</p>
+
+
+			<div class="issue" style="margin: 30px;">
+				<ul>
+					<li><strong>- 공통 : </strong></li>
+				</ul>
+			</div>
+			<table class="guide_table" style="table-layout: auto;">
+				<thead>
+					<tr>
+						<th>구분</th>
+						<th>2 Depth</th>
+						<th>3 Depth</th>
+						<th>파일명</th>
+						<th>디자인</th>
+						<th>퍼블리싱</th>
+						<th>비고</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<!-- //메뉴 E -->     
+					<tr>
+						<td style="text-align: center;">로그인</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/login_sch.html" target="_blank">login_sch.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>   
+					
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">아이디찾기</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/find_id.html" target="_blank">find_id.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>   
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">아이디찾기성공</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/find_id_02.html" target="_blank">find_id_02.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>   
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">비빌번호 찾기</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/find_pw.html" target="_blank">find_pw.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>   
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">비밀번호 이메일발송안내</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/find_pw_02.html" target="_blank">find_pw_02.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>   
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">비밀번호재설정</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/find_pw_03.html" target="_blank">find_pw_03.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>   
+                    <tr>
+						<td style="text-align: center;">회원가입</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/join_01.html" target="_blank">join_01.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>   
+                    <tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">회원정보입력</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/join_02.html" target="_blank">join_02.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>                     
+                    <tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">본인 이메일확인안내</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/join_03.html" target="_blank">join_03.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>  
+                    <tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">수강 회원가입</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/join_deep_01.html" target="_blank">join_deep_01.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>  
+                    <tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">수강생 정보입력</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/join_deep_02.html" target="_blank">join_deep_02.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">미완료</td>
+						<td style="text-align: center;"></td>
+					</tr>  
+                    
+					<tr>
+						<td style="text-align: center; background-color: #dadada;" colspan="8" ></td>
+					</tr>  
+                    
+                    <tr>
+						<td style="text-align: center;">공통</td>
+						<td style="text-align: center;">메뉴</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/background.html" target="_blank">background.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+                    <tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">수강신청및스케줄</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="./src/html/schedule.html" target="_blank">schedule.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+                    <tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">수강신청_상세</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/schedule_add.html" target="_blank">schedule_add.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center; background-color: #dadada;" colspan="8" ></td>
+					</tr>  
+
+					<tr>
+						<td style="text-align: center;">행정지원실</td>
+						<td style="text-align: center;">메뉴</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/administrative_support_office.html" target="_blank">administrative_support_office.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+                    <tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">자주 묻는 질문</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/question.html" target="_blank">question.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+                    <tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">Q&A</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/q&a.html" target="_blank">q&a.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+                    <tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">Q&A 글쓰기</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/qna_writing.html" target="_blank">qna_writing.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+                    <tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">공지사항</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/announcement.html" target="_blank">announcement.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center; background-color: #dadada;" colspan="8" ></td>
+					</tr>  
+					<tr>
+						<td style="text-align: center;">스터디</td>
+						<td style="text-align: center;">메뉴</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/study_menu.html" target="_blank">study_menu.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">스터디방목록</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/study_room.html" target="_blank">study_room.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center; background-color: #dadada;" colspan="8" ></td>
+					</tr>  
+					<tr>
+						<td style="text-align: center;">체험관</td>
+						<td style="text-align: center;">메뉴</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/experience_menu.html" target="_blank">experience_menu.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">체험신청</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/experience_application.html" target="_blank">experience_application.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">다른체험제안</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/experience_proposal.html" target="_blank">experience_proposal.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">체험 인증사진</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/experience_picture.html" target="_blank">experience_picture.html.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center; background-color: #dadada;" colspan="8" ></td>
+					</tr>  
+					<tr>
+						<td style="text-align: center;">마이페이지</td>
+						<td style="text-align: center;">메뉴</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/my_page_menu.html" target="_blank">my_page_menu.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">나의 정보</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/my_page_information01.html" target="_blank">my_page_information01.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">나의등급</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/my_page_information01.html" target="_blank">my_page_information01.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center; background-color: red;" class="coding_stat_web"  >미완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">나의 신청 현황</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/my_page_application_status.html" target="_blank">my_page_application_status.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">나의 Q&A</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/my_page_qna.html" target="_blank">my_page_qna.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">알림함</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/my_page_alarm.html" target="_blank">my_page_alarm.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">나의 신고내역</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/my_page_declaration.html" target="_blank">my_page_declaration.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center; background-color: #dadada;" colspan="8" ></td>
+					</tr>  
+					<tr>
+						<td style="text-align: center;">교수실</td>
+						<td style="text-align: center;">교수실 메뉴</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/professor_menu.html" target="_blank">professor_menu.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">임시</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;">2D 교수실</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/professor_room.html" target="_blank">professor_room.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">임시</td>
+						<td style="text-align: center;"></td>
+					</tr>
+					<tr>
+						<td style="text-align: center; background-color: #dadada;" colspan="8" ></td>
+					</tr>  
+					<tr>
+						<td style="text-align: center;">테스트</td>
+						<td style="text-align: center;">2d 가상화면</td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: left;"><a href="/src/html/2d_test.html" target="_blank">2d_test.html</a></td>
+						<td style="text-align: center;"></td>
+						<td style="text-align: center;" class="coding_stat_web">완료</td>
+						<td style="text-align: center;"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+
+</body>
+
+</html>
