@@ -1,0 +1,73 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Cafe24Ssurround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#app{ position: relative; width:100%; margin:0 auto; overflow:hidden; }
+
+/* 취향세포 테스트 */
+.cellTest-wr{ position: relative; padding: 0; margin: 0; background-color: #f5fefd; display: flex; flex-direction: column; justify-content: space-between; min-height: 100vh;}
+.cellTest-wr .cell-h1{ text-align: center; margin: 0 0 auto 0; height: 6.8rem; line-height: 6.8rem; background-color: #04ccd9; background-image: url(../images/cellTest_tit_bg.png); background-position:  0 100%; background-repeat: repeat-x; background-size: 3rem auto; font-size: 2.4rem; color: #fff; font-family: 'Cafe24Ssurround';}
+.cellTest-wr .text-con{ flex: 1; padding: 1.5rem 2.5rem 2.5rem;}
+.cellTest-wr .text-con .hd-tit{ text-align: center; font-size: 1.8rem; color: #2b2b2b; font-family: 'Cafe24Ssurround'; margin-bottom: 4rem;}
+.cellTest-wr .text-con .hd-tit .img{ text-align: center;}
+.cellTest-wr .text-con .hd-tit img{ height: 12rem;}
+
+.que-bx dt{ position: relative; background-color: #04ccd9; border-radius: 1.5rem 1.5rem 0 0; padding: 3.6rem 2rem 1.6rem; color: #fff; text-align: center; font-size: 1.5rem; font-family: 'Cafe24Ssurround';}
+.que-bx dt i{ position: absolute; top: -2.7rem; left: 50%; margin-left: -2.7rem; width: 5.4rem; height: 5.4rem; border-radius: 50%; display: block; background-color: #fff; line-height: 5rem;  color: #04ccd9; font-size: 1.6rem; border: #04ccd9 4px solid; font-family: 'GmarketSansMedium'; font-weight: 700;}
+.que-bx dd{ padding: 4.8vw; border: #04ccd9 2px solid; border-radius: 0 0 1.5rem 1.5rem; font-family: 'Pretendard-Regular';}
+
+.dv-ans{ display: flex; justify-content: center; align-items: center; }
+.dv-ans input,
+.dv-ans input:checked{ position: absolute; top: 0; left: 0; width: 0; height: 0; background: none; margin: 0;}
+.dv-ans span{ background-color: #f4f4f4; padding: 1.2rem; border-radius: 2rem; text-align: center; flex: 1; line-height: 1.2;}
+.dv-ans span em{ color: #00bac6; font-weight: 600;}
+.dv-ans + .dv-ans{ margin-top: 1.5rem;}
+.dv-ans input:checked + span{ background-color: #04ccd9; color: #fff;}
+.dv-ans input:checked + span em{ color: #fff;}
+
+.cellTest-intro{ background: url(../images/cellTest_intro.png) 50% 50% no-repeat; background-size: cover; height: 100vh; display:flex; justify-content: center; align-items: center; text-align: center;}
+.cellTest-intro .intro-bx p img{ height: 4.3rem; }
+.cellTest-intro .intro-bx h1{ margin: 1rem 0 0; text-align: center;}
+.cellTest-intro .intro-bx h1 img{ height: 15.6rem;}
+.cellTest-intro .intro-bx .bt-test{ display: inline-block; margin: 2.2rem auto 0; background-color: #2444f5; color: #fff; font-family: 'GmarketSansMedium'; font-size: 2.8rem; font-weight: 700; width: 18rem; height: 5.8rem; line-height: 6.2rem; border-radius: 8vw;}
+
+.cellTest-result{ min-height: 100vh; padding: 2.7rem; background-color: #f8f3f0;}
+.cellTest-result .inbx{ background-color: #fff; border-radius: 4.5rem; border: #f5c4af .4rem solid; text-align: center; padding: 4rem 1rem;}
+.cellTest-result .cellTest-result-hd h1{ position: relative; z-index: 2; font-size: 2.2rem; line-height: 1.5; font-family: 'Cafe24Ssurround';}
+.cellTest-result .cellTest-result-hd h1 b{ font-size: 4.4rem; display: block;}
+.cellTest-result .cellTest-result-hd .img{ max-width: 26rem; margin: -8rem auto 0;}
+.cellTest-result .cellTest-result-tx{ margin: 3rem 0 0 0; color: #393838; font-size: 1.5rem; font-family: 'Pretendard-Regular'; letter-spacing: -.05em;}
+.cellTest-result .cellTest-result-tx em{ font-weight: 600;}
+.cellTest-result.result01{ background-color: #f8f3f0;}
+.cellTest-result.result01 .inbx{ border-color: #f5c4af; }
+.cellTest-result.result01 .cellTest-result-hd h1{ color: #ec7f55;}
+.cellTest-result.result01 .cellTest-result-tx em{ color: #ec7f55;}
+.cellTest-result.result02{ background-color: #f6f0f1;}
+.cellTest-result.result02 .inbx{ border-color: #f2b7c3; }
+.cellTest-result.result02 .cellTest-result-hd h1{ color: #ea6388;}
+.cellTest-result.result02 .cellTest-result-tx em{ color: #ea6388;}
+.cellTest-result.result03{ background-color: #f5f8f1;}
+.cellTest-result.result03 .inbx{ border-color: #81d6a3; }
+.cellTest-result.result03 .cellTest-result-hd h1{ color: #5fb57d;}
+.cellTest-result.result03 .cellTest-result-tx em{ color: #5fb57d;}
+.cellTest-result.result04{ background-color: #f2f0f7;}
+.cellTest-result.result04 .inbx{ border-color: #b995ef; }
+.cellTest-result.result04 .cellTest-result-hd h1{ color: #966bd8;}
+.cellTest-result.result04 .cellTest-result-tx em{ color: #966bd8;}
